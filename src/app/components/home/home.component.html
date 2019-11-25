@@ -1,0 +1,28 @@
+<div class='main'>
+    <div class="container">
+        <div class="row">
+            <h2> Products Most Brought </h2>
+            <!--<input type="text" placeholder="Search for products">
+            <ul>
+                <li *ngFor="let c of characters | filter : searchText">
+                    {{c}}
+                </li>
+            </ul>-->
+            <div class="col-xl-4 col-lg-4 col-md-6" *ngFor="let list of items">
+                <div class="single_recepie text-center">
+                    <div class="recepie_thumb">
+                        <img src={{list.img_url}} alt="">
+                    </div>
+                    <h3>{{list.item}}</h3>
+                    <span>{{list.plu_upc}}</span>
+                    <p>{{list.uom}}
+                    </p>
+                    <a href="#" class="line_btn">View Full Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div> Developed using angular </div>
+</footer>

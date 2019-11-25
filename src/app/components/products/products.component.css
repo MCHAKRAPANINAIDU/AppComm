@@ -1,0 +1,218 @@
+.main,
+.container,
+.row {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #F7F7F7;
+    display: flow-root;
+}
+
+.prod_recepie {
+    width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+    height: 120px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #F7F7F7;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+}
+
+.col-lg-9,
+.col-md-9 {
+    width: 70%;
+    float: left;
+}
+
+.col-lg-3,
+.col-md-3 {
+    width: 30%;
+    float: right;
+}
+
+.recepie_thumb {
+    width: 20%;
+    float: left;
+}
+
+.prod_recepie h3 {
+    width: 70%;
+    float: left;
+}
+
+.prod_recepie .line_btn {
+    width: 8%;
+    float: left;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.recepie_thumb img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.line_btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact100-form {
+    width: 98%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.validate-input {
+    position: relative;
+}
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.container-contact100-form-btn {
+    width: 70%;
+    margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+}
+
+.label-input100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    top: 14px;
+    left: -25px;
+    width: 80px;
+}
+
+input.input100 {
+    height: 45px;
+    width: 70%;
+    margin-left: 25% !important;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.input100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    background: transparent;
+    padding: 0 5px;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+select {
+    width: 70%;
+    margin-left: 25%;
+    height: 30px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+[role=button],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+textarea.input100 {
+    min-height: 50px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    width: 70%;
+    margin-left: 25%;
+    border-bottom: 1px solid #b2b2b2;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
+
+.contact100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}

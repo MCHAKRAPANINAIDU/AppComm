@@ -1,0 +1,70 @@
+.col-lg-10.col-md-10 {
+    width: 70%;
+    float: left;
+    padding-top: 15px;
+}
+
+.col-lg-1.col-md-1 {
+    width: 15%;
+    float: left;
+    padding-top: 15px;
+}
+
+.container-contact100-form-btn {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+}
+
+.contact100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+.line_btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.prod_recepie .line_btn {
+    width: 8%;
+    float: left;
+    text-decoration: none;
+    color: black;
+}
+
+.container-contact100-form-btn.bottom-btn {
+    margin-top: 300px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nav Bar</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0%;
+        padding: 0px;
+    }
+    
+    .navbar {
+        width: 100%;
+        height: 60px;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li class="float-left"><a class="active" routerLink="home">Home</a></li>
+                <li class="float-left"><a routerLink="products">Product List</a></li>
+                <li class="float-right"><input type="search" placeholder="Serach for products here" /><button>Search</button></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.modalContainer {
+    width: 33%;
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container,
+.row {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.col-xl-4.col-lg-4.col-md-6 {
+    width: 33%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.single_recepie {
+    padding: 15px 0px;
+    margin: 0px 15px;
+    background-color: #F7F7F7;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.recepie_area .single_recepie .recepie_thumb {
+    max-width: 300px;
+    max-height: 300px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.recepie_area .single_recepie .recepie_thumb img {
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.recepie_area .single_recepie h3 {
+    font-size: 30px;
+    color: #000;
+    margin-top: 38px;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+}
+
+.recepie_area .single_recepie span {
+    font-size: 12px;
+    color: #777;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.recepie_area .single_recepie p {
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 0;
+    margin-bottom: 31px;
+    font-family: roboto, sans-serif;
+}
+
+.line_btn {
+    display: inline-block;
+    font-size: 13px;
+    color: #000;
+    border: 1px solid #ffc000;
+    text-transform: capitalize;
+    padding: 13px 34px;
+    font-weight: 500;
+    font-family: roboto, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+a,
+button {
+    color: #1f1f1f;
+    outline: medium;
+}
+
+a,
+.button {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
