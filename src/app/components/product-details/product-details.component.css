@@ -58,6 +58,10 @@ button {
     height: 40px;
 }
 
+select {
+    background-color: gainsboro;
+}
+
 .prod_recepie .line_btn {
     width: 8%;
     float: left;
