@@ -1,3 +1,4 @@
-<app-navbar></app-navbar>
-<router-outlet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<app-navbar>{{ dataAppComp}}</app-navbar>
+<router-outlet (dataToAppComp)="getChildDaata($event)">
 </router-outlet>

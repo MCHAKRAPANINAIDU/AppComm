@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  Output, OnInit } from '@angular/core';
 import { ItemsService } from '../../services/items.service';
 import { DataObj } from '../../data-obj';
+import { FormsModule } from '@angular/forms';
+import { EventEmitter } from 'events';
 import { Observable, of } from 'rxjs'
 import { ActivatedRoute } from '@angular/router';
 
@@ -10,15 +12,29 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-prodDetails: Object;
-  constructor(private data: ItemsService, private route: ActivatedRoute) {
-    this.route.params.subscribe( params => this.prodDetails = params.id)
+   prodId : string;
+   dataProds: Object;
+   dataProd: Object;
+    items;
+    jsonData;
+    prodDetails;
+   public producIdVal: string;
+   constructor(private itemsList: ItemsService, private route: ActivatedRoute){
+     this.items = this.itemsList.getItems();
+     this.route.params.subscribe( params => this.prodDetails = params.id);
+     this.dataProd = this.items; 
    }
+ 
+   ngOnInit() {
+     this.itemsList.currentMessage.subscribe(prodId => this.prodId = prodId);
+     this.dataProds = this.items[this.items.map(function (item) { return item.productId; }).indexOf(this.prodId)];
+     
+    this.jsonData = JSON.stringify(this.dataProds);
+  }   
 
-  ngOnInit() {
-    /*this.data.getItems(this.prodDetails).subscribe(
-      data => this.prodDetails = data
-    )*/
-  }
-
+     prodData(prodId){
+      //this.dataProds = this.prodId;
+      console.log(this.dataProds);
+       
+     }
 }

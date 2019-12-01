@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DataObj } from '../data-obj';
@@ -6,13 +7,15 @@ import { DataObj } from '../data-obj';
 @Injectable({
   providedIn: 'root'
 })
-export class ItemsService { 
-
+export class ItemsService {
+  private messageId = new BehaviorSubject('105');
+  currentMessage = this.messageId.asObservable();
     // Placeholder for todos
     dataObject: DataObj[] = [];
+    finalData;
 constructor() { }
   getItems() {
-      return  this.dataObject = [
+      this.dataObject = [
             {
               productSize: '',
               item: 'Egg Manchurian',
@@ -21,7 +24,6 @@ constructor() { }
               productId: '102',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-              catId: '1',
               uom: 'Time Needs: 30 Mins',
               img_url: '../assets/img/recpie_1.webp'
             },
@@ -33,7 +35,6 @@ constructor() { }
               productId: '159',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 30 Mins',
               img_url: '../assets/img/recpie_2.webp'
             },
@@ -45,7 +46,6 @@ constructor() { }
               productId: '105',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 40 Mins',
               img_url: '../assets/img/recpie_3.webp'
             },
@@ -57,7 +57,6 @@ constructor() { }
               productId: '156',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 45 Mins',
               img_url: '../assets/img/144502_Shamarie84_118a408a-c55b-4bcb-9769-07935a83ed5c.jpeg'
             },
@@ -69,7 +68,6 @@ constructor() { }
               productId: '150',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 20 Mins',
               img_url: '../assets/img/BHDeluxeHam__67214.1550868478.webp'
             },
@@ -81,7 +79,6 @@ constructor() { }
               productId: '151',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 50 Mins',
               img_url: '../assets/img/boars-head-deluxe-low-sodium-oven-roasted-beef-cap-off-top-round.jpg'
             },
@@ -93,7 +90,6 @@ constructor() { }
               productId: '166',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 25 Mins',
               img_url: '../assets/img/default-931317f3313ee020efbaacb5293446308aeade2ba44e0856b93ff773c352b025.png'
             },
@@ -105,7 +101,6 @@ constructor() { }
               productId: '11005',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 25 Mins',
               img_url: '../assets/img/del_bh_lwsd_dlxham_z.jpg'
             },
@@ -117,7 +112,6 @@ constructor() { }
               productId: '158',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 25 Mins',
               img_url: '../assets/img/detail-001@1200.1525977406.jpg'
             },
@@ -129,7 +123,6 @@ constructor() { }
               productId: '173',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 55 Mins',
               img_url: '../assets/img/primary_00e850a2-3719-4b8d-ae1b-a1cf9eab3818.jpg'
             },
@@ -141,7 +134,6 @@ constructor() { }
               productId: '189',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 35 Mins',
               img_url: '../assets/img/primary_14e6df27-8bd4-4f34-9f0d-ed67a3da9d38.jpg'
             },
@@ -153,7 +145,6 @@ constructor() { }
               productId: '11018',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/primary_36c59916-2df7-4d78-bf57-f3eab5f9edf6.jpeg'
             },
@@ -165,7 +156,6 @@ constructor() { }
               productId: '11044',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/primary_63ff2328-a9e5-43e9-a1a4-a91b9f724fd4.jpg'
             },
@@ -177,7 +167,6 @@ constructor() { }
               productId: '11022',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/primary_b69923c0-1e6e-4cb7-a183-2026dea0378e.jpg'
             },
@@ -189,7 +178,6 @@ constructor() { }
               productId: '11018',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '1',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/primary_b5666443-b215-4d6f-bc29-0b5b0f1786b8.jpg'
             },
@@ -201,7 +189,6 @@ constructor() { }
               productId: '235',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/primary_cab5b92b-2014-4a79-8b50-9bd4eccd422d.jpg'
             },
@@ -213,7 +200,6 @@ constructor() { }
               productId: '915',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/primary_fa4eae39-109a-4733-82e9-47ff1d76a83b.jpg'
             },
@@ -225,7 +211,6 @@ constructor() { }
               productId: '232',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -237,7 +222,6 @@ constructor() { }
               productId: '246',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/turkey-crop-74909f3624504149b970586e921239af.webp'
             },
@@ -249,7 +233,6 @@ constructor() { }
               productId: '197',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -261,7 +244,6 @@ constructor() { }
               productId: '205',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -273,7 +255,6 @@ constructor() { }
               productId: '12011',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -285,7 +266,6 @@ constructor() { }
               productId: '12012',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -297,7 +277,6 @@ constructor() { }
               productId: '227',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -309,7 +288,6 @@ constructor() { }
               productId: '12004',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -321,7 +299,6 @@ constructor() { }
               productId: '206',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -333,7 +310,6 @@ constructor() { }
               productId: '210',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -345,7 +321,6 @@ constructor() { }
               productId: '341',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '2',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -357,7 +332,6 @@ constructor() { }
               productId: '278',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -369,7 +343,6 @@ constructor() { }
               productId: '276',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -381,7 +354,6 @@ constructor() { }
               productId: '270',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -393,7 +365,6 @@ constructor() { }
               productId: '294',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -405,7 +376,6 @@ constructor() { }
               productId: '297',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -417,7 +387,6 @@ constructor() { }
               productId: '421',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -429,7 +398,6 @@ constructor() { }
               productId: '275',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -441,7 +409,6 @@ constructor() { }
               productId: '284',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -453,7 +420,6 @@ constructor() { }
               productId: '296',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -465,7 +431,6 @@ constructor() { }
               productId: '958',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -477,7 +442,6 @@ constructor() { }
               productId: '13016',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -489,7 +453,6 @@ constructor() { }
               productId: '13018',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -501,7 +464,6 @@ constructor() { }
               productId: '13033',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -513,7 +475,6 @@ constructor() { }
               productId: '13017',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '3',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -525,7 +486,6 @@ constructor() { }
               productId: '13034',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 5 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -537,7 +497,6 @@ constructor() { }
               productId: '13014',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 35 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -549,7 +508,6 @@ constructor() { }
               productId: '437',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 34 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -561,7 +519,6 @@ constructor() { }
               productId: '419',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 35 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -573,7 +530,6 @@ constructor() { }
               productId: '13013',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 36 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -585,7 +541,6 @@ constructor() { }
               productId: '438',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 39 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -597,7 +552,6 @@ constructor() { }
               productId: '440',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 30 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -609,7 +563,6 @@ constructor() { }
               productId: '439',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 35 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             },
@@ -621,11 +574,26 @@ constructor() { }
               productId: '13011',
               prodDesc: 'abcd',
               prodReviews: ['good', 'aswesome', 'nice'],
-               catId : '4',
               uom: 'Time Needs: 10 Mins',
               img_url: '../assets/img/genMid.ML81770760_0.jpg'
             }
-          ]
-    };
-}
+          ];
+      return this.finalData = Array.from(this.dataObject.reduce((m, t) => m.set(t.productId, t), new Map()).values());
+    }
+    changeMessage(prodId: string) {
+      this.messageId.next(prodId);
+    }
+    addProdObject(value){
+      let sameFound: any;
+      for (let i of this.finalData) {
+        if( value.productId == this.finalData[i]) {
+          sameFound = 1;
+        } else {
+          sameFound = 0;
+        }
+      }
+      this.finalData.push(value);
+      this.finalData = Array.from(this.finalData.reduce((m, t) => m.set(t.productId, t), new Map()).values());
+    }
+  }
 

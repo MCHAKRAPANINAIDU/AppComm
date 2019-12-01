@@ -6,7 +6,6 @@ export class DataObj {
      productId: string;
      prodDesc: string;
      prodReviews: Array<string>;
-     catId: string;
      uom: string;
      img_url: string;
      constructor(values: Object = {}) {
