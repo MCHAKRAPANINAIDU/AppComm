@@ -49,11 +49,6 @@
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
 }
 
-h2 {
-    font-size: 43px;
-    padding: 15px 0px;
-}
-
 .text-center {
     text-align: center!important;
 }
@@ -81,7 +76,6 @@ img {
 }
 
 .recepie_area .single_recepie h3 {
-    font-size: 30px;
     color: #000;
     margin-top: 38px;
     margin-bottom: 20px;
@@ -151,7 +145,6 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
     height: 50px;
     width: 100%;
     height: 100%;
@@ -164,7 +157,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
     width: 100%;
     height: 100%;
 }
@@ -315,9 +307,6 @@ body .dribbble img {
     .topnav a.icon {
         float: right;
         display: block;
-    }
-    h2 {
-        font-size: 25px;
     }
 }
 

@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main {
+    background-color: #F8F8F8;
+}
+
+.topnav ul {
+    background-color: #002045;
+}
+
+footer {
+    background: #002045;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+h2 {
+    font-size: 45px;
+    padding: 15px 0px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}

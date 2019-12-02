@@ -36,11 +36,21 @@
                             <img src={{list.img_url}} alt="">
                         </div>
                         <h3 class="col-xs-12 col-sm-12 col-lg-9 col-md-9">{{list.item}}</h3>
-                        <a href="#" class="line_btn col-xs-12 col-sm-12 col-lg-3 col-md-3">
+                        <button href="#" title="Product Reviews" class="line_btn col-xs-12 col-sm-12 col-lg-3 col-md-3" (click)="toggle()">
                             <span>Reviews</span>
                             <img src="../assets/img/star-solid.svg" />
-                        </a>
+                        </button>
                     </div>
+                    <ng-container *ngIf="show">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+                                <h3>Reviews</h3>
+                            </div>
+                        </div>
+                        <!--<ol *ngFor="let review of prodReview" style="list-style: disc;">
+                                    <li>{{review}}</li>
+                                </ol>-->
+                    </ng-container>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-lg-3 col-md-3">
@@ -107,3 +117,6 @@
         </div>
     </div>
 </div>
+<footer>
+    <div> Developed using angular </div>
+</footer>

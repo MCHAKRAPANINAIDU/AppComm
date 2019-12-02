@@ -31,12 +31,12 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-lg-2 col-md-2">
                 <div class="container-contact100-form-btn leftAllign">
-                    <a routerLink="/home" class="button contact100-form-btn">
+                    <a routerLink="/home" class="button contact100-form-btn" title="Back to home">
                         <span>Back</span>
                     </a>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-lg-9 col-md-9">
+            <div class="col-xs-12 col-sm-12 col-lg-8 col-md-8">
                 <div class="prod-details">
                     <h2>Products Details </h2>
                     <h3>Name: {{dataProds.item}}</h3>
@@ -47,12 +47,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-lg-1 col-md-1">
-                <a href="#" class="line_btn">
+            <div class="col-xs-12 col-sm-12 col-lg-2 col-md-2">
+                <button class="line_btn" title="Product review" (click)="toggle()">
                     <img src="../assets/img/star-solid.svg" />
-                </a>
+                </button>
+                <ng-container *ngIf="show">
+                    <h3>Reviews</h3>
+                    <ol *ngFor="let review of prodReview" style="list-style: disc;">
+                        <li>{{review}}</li>
+                    </ol>
+                </ng-container>
                 <div class="container-contact100-form-btn  bottom-btn">
-                    <a routerLink="/home" class="button contact100-form-btn">
+                    <a routerLink="/home" class="button contact100-form-btn" title="Back to home">
                         <span>Back</span>
                     </a>
                 </div>
@@ -60,3 +66,6 @@
         </div>
     </div>
 </div>
+<footer>
+    <div> Developed using angular </div>
+</footer>

@@ -25,6 +25,8 @@ export class ProductsComponent implements OnInit {
   proTime: string;
   public search:any = '';
   locked: any[] = [];
+  public show: boolean = false;
+  prodReview;
   @Output() addProdObjToAppComp = new EventEmitter();
   constructor(private itemsList: ItemsService) {
     this.items = this.itemsList.getItems();
@@ -53,5 +55,8 @@ export class ProductsComponent implements OnInit {
     this.itemsList.addProdObject(this.prodObj);
     console.log(this.prodObj);
     console.log(this.items.length);
+  }
+  toggle() {
+    this.show = !this.show;
   }
 }

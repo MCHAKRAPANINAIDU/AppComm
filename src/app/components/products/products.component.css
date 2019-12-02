@@ -25,10 +25,6 @@
     align-items: center;
 }
 
-h2.text-center {
-    font-size: 45px;
-}
-
 .prod_recepie .line_btn {
     text-decoration: none;
     color: black;
@@ -203,9 +199,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-    h2.text-center {
-        font-size: 25px;
-    }
     .prod_recepie.text-center {
         width: 100%;
         height: auto !important;
@@ -240,7 +233,6 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
     height: 50px;
     width: 100%;
     height: 100%;
@@ -253,7 +245,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
     width: 100%;
     height: 100%;
 }
@@ -404,9 +395,6 @@ body .dribbble img {
     .topnav a.icon {
         float: right;
         display: block;
-    }
-    h2 {
-        font-size: 25px;
     }
 }
 
