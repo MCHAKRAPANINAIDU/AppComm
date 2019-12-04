@@ -50,7 +50,7 @@ export class ProductsComponent implements OnInit {
       prodDesc: this.proDesc,
       prodReviews: ['good', 'aswesome', 'nice'],
       uom: 'Time Needs:' + time + 'Mins',
-      img_url: '../assets/img/recpie_1.webp'
+      img_url: '../assets/img/genMid.ML81770760_0.jpg'
     };
     this.itemsList.addProdObject(this.prodObj);
     console.log(this.prodObj);
@@ -58,5 +58,10 @@ export class ProductsComponent implements OnInit {
   }
   toggle() {
     this.show = !this.show;
+  }
+  closePop(value) {
+    document.getElementById(value).style.display =  'none';
+    console.log(value);
+    console.log(document.getElementById(value));
   }
 }
